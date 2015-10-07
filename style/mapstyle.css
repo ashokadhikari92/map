@@ -1,0 +1,10 @@
+.tooltip{ background-color:gainsboro;
+    margin: 10px;
+    height: 45px;
+    width: 150px;
+    padding-left: 10px;
+    padding-top: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
