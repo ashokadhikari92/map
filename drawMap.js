@@ -11,7 +11,6 @@ var canvas = d3.select("body")
     .attr("height",height)
     ;
 
-
 d3.json("data/nepal-districts.geojson",createMap);
 
 function createMap(nepal){
@@ -63,8 +62,6 @@ function createMap(nepal){
 
             //.text(d3.event.pageX + ", " + nepal.properties.DISTRICT +","+ d3.event.pageY)
             .text(nepal.properties.DISTRICT);
-
-
     }
 
     function mousemove(nepal) {
@@ -82,12 +79,74 @@ function createMap(nepal){
         toolTipDiv.remove();
     }
 
-
-
-
 };
 
+var color=d3.scale.linear()
+        .domain([0,60])
+        .range(["red","blue"])
+    ;
 
+d3.csv("data/Data_map.csv",processAllDistrict)
+
+var summedUpData=[];
+function processAllDistrict(districtArray){
+    var sumUpDeaths=0,sumUpInjured= 0,sumUpPartial= 0,sumUpFull=0;
+    for(district in districtArray){
+        if(districtArray[district].Subdivision=="Death")
+            sumUpDeaths+=districtArray[district].no;
+        if(districtArray[district].Subdivision=="Injured")
+            sumUpInjured+=districtArray[district].no;
+        if(districtArray[district].Subdivision=="Govt. Houses Fully Damaged")
+            sumUpFull+=districtArray[district].no;
+        if(districtArray[district].Subdivision=="Govt. Houses Partially Damaged")
+            sumUpPartial+=districtArray[district].no;
+
+    }
+    summedUpData.push(sumUpDeaths);
+    summedUpData.push(sumUpInjured);
+    summedUpData.push(sumUpFull);
+    summedUpData.push(sumUpPartial);
+    drawBarChart(summedUpData);
+}
+
+function setupBarChartBasics(){
+    var margin ={top:30,right:5,bottom:20,left:50},
+        width=500-margin.left-margin.right,
+        height=250-margin.top-margin.bottom,
+        colorBar=d3.scale.category20(),
+        barPadding=1
+        ;
+
+    return{
+        margin:margin,
+        width:width,
+        height:height,
+        colorBar:colorBar,
+        barPadding:barPadding
+    }
+        ;
+}
+//creates both bar chart
+function drawBarChart(districtData){
+    var basics=setupBarChartBasics();
+    var margin=basics.margin,
+        width =basics.width,
+        height=basics.height,
+        colorBar=basics.colorBar,
+        barPadding =basics.barPadding
+        ;
+}
+
+var svg = d3.select("#barChartHC")
+    .append("g")
+    .attr("transform","translate("+margin.left+","+ margin.top+")")
+;
+
+
+
+function drawIDBarChart(){
+
+}
 //base map completed now
 //relatung
 //start of choropleth drawing
