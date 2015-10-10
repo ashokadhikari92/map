@@ -8,3 +8,43 @@
     -moz-border-radius:10px;
     border-radius:10px;
 }
+
+svg{
+margin:5px;
+}
+select
+{
+ float: right;
+    margin: 10px;
+}
+#content{
+    border:1px solid red;
+    height:600px;
+    width:100%;
+}
+#map{
+    margin: 5px 5px ;
+    float:left;
+    width:48%;
+    height: 98%;
+    border:1px solid green;
+}
+
+#barChart{
+    margin: 5px 5px;
+    float:right;
+    width:48%;
+    height:98%;
+
+    border:1px solid blue;
+}
+#barChartHC,#barChartID{
+    margin: 5px 5px;
+    display: block;
+    vertical-align: middle;
+
+    width:98%;
+    height:48%;
+    border:1px solid blue;
+}
+

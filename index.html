@@ -10,9 +10,22 @@
 </head>
 
 <body>
-<script src="drawMap.js" charset="utf-8"></script>
 
+
+<div id="content">
+<div id="map"></div>
+
+<div id="barChart">
 <div id="barChartHC"></div>
-<div id="barChartID"></div>
+<div id="barChartID">
+    <select id="selectMode">
+        <option value="goverment" selected>Goverment</option>
+        <option value="private">Private</option>
+    </select>
+</div>
+</div>
+</div>
+<script src="drawMap.js" charset="utf-8"></script>
+<!--<script src="test.js" charset="utf-8"></script>-->
 </body>
 </html>

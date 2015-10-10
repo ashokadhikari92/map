@@ -2,53 +2,88 @@
  * Created by silentflutes on 10/6/2015.
  */
 
-var width=960;
-var height=700;
+var width=750;
+var height=580;
 
-var canvas = d3.select("body")
-    .append("svg")
-    .attr("width",width)
-    .attr("height",height)
+//format
+var formatAsPercentage =d3.format("%"),
+    formatAsPercentage1Dec=d3.format(".1%"),
+    formatAsInteger=d3.format(","),
+    fsec=d3.time.format("%S s"),
+    fmin=d3.time.format("%M m"),
+    fhou=d3.time.format("%H h"),
+    fwee=d3.time.format("%a"),
+    fdat=d3.time.format("%d d"),
+    fmon=d3.time.format("%b")
     ;
+
+
 
 d3.json("data/nepal-districts.geojson",createMap);
 
-function createMap(nepal){
+function createMap(nepal) {
 
-    var group =  canvas.selectAll("g")
-        .data(nepal.features)
-        .enter()
-        .append("g")
-    ;
+    var canvas = d3.select("#map")
+            .append("svg")
+            .attr("width",width)
+            .attr("height",height)
+           // .attr("border",1 )
+            //.attr("style", "outline: thin solid red;")
+            .attr("style", "border: 1px solid red;")
+            //.attr("style", "margin: 5px;")
 
-    var aProjection =d3.geo.mercator()
-        .translate([width/2,height/2])
-        .scale(6600)
-         .center([84.115593872070313, 28.665876770019531]) ;
+        ;
 
-    var geoPath=d3.geo.path().projection(aProjection);
+    /*var borderPath = svg.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("height", h)
+        .attr("width", w)
+        .style("stroke", bordercolor)
+        .style("fill", "none")
+        .style("stroke-width", border);*/
 
-   var district=group.append("path")
-       .attr("d",geoPath)
-       .attr("class","district")
-       .attr("fill","#fff")
-       .attr("stroke","#ccc")
-       .attr("stroke-width","2px")
-       .on("mouseover", mouseover)
-       .on("mousemove", mousemove)
-       .on("mouseout", mouseout);
+    var colorBar = d3.scale.category20()
+        ;
+
+    var group = canvas.selectAll("g")
+            .data(nepal.features)
+            .enter()
+            .append("g")
+        ;
+
+    var projection =d3.geo.mercator()
+        //.scale((width/640)*100).translate([width/2, height/2]);
+          // .center([width/2,height/2])
+           .scale(5000)
+          // .center([30.115593872070313, 18.665876770019531])
+           .center([85.315593872070313, 28.665876770019531])
+        ;
+
+    var geoPath=d3.geo.path().projection(projection);
+
+    var district=group.append("path")
+            .attr("d",geoPath)
+            .attr("class","district")
+            .attr("fill","#fff")
+            .attr("stroke","#ccc")
+            .attr("stroke-width","2px")
+           .on("mouseover", mouseover)
+            .on("mousemove", mousemove)
+            .on("mouseout", mouseout)
+            .on("click",mouseclick)
+        ;
 
     var bodyNode=d3.select('body').node();
-
     var absoluteMousePos=d3.mouse(bodyNode);
-
     var toolTipDiv;
+
     function mouseover(nepal) {
         var absoluteMousePos=d3.mouse(bodyNode);
         toolTipDiv = d3.select("body")
-                .append("div")
-                .attr("class", "tooltip")
-            ;
+            .append("div")
+            .attr("class", "tooltip")
+        ;
 
         toolTipDiv.transition()
             .duration(500)
@@ -60,13 +95,14 @@ function createMap(nepal){
             .style('position','absolute')
             .style('z-index',1001)
 
-            //.text(d3.event.pageX + ", " + nepal.properties.DISTRICT +","+ d3.event.pageY)
+            //.text(d3.event.pageX + ", " + selectedDistrict.properties.DISTRICT +","+ d3.event.pageY)
             .text(nepal.properties.DISTRICT);
     }
 
     function mousemove(nepal) {
-        //var value =nepal.properties.DISTRICT;
+
         var absoluteMousePos = d3.mouse(bodyNode);
+
         toolTipDiv
             //.text(d3.event.pageX + ", " + nepal.properties.DISTRICT +","+ d3.event.pageY)
             .text(nepal.properties.DISTRICT)
@@ -79,44 +115,20 @@ function createMap(nepal){
         toolTipDiv.remove();
     }
 
+    function mouseclick(){
+        // updateBarChart(selectedDistrict,colorBar(i),"Human Casualties","#barChartHC","plotbarChartHC");
+        // updateBarChart(selectedDistrict,colorBar(i),"Infrastructure Damage","#barChartID","plotbarChartID");
+    }
+
 };
 
-var color=d3.scale.linear()
-        .domain([0,60])
-        .range(["red","blue"])
-    ;
-
-d3.csv("data/Data_map.csv",processAllDistrict)
-
-var summedUpData=[];
-function processAllDistrict(districtArray){
-    var sumUpDeaths=0,sumUpInjured= 0,sumUpPartial= 0,sumUpFull=0;
-    for(district in districtArray){
-        if(districtArray[district].Subdivision=="Death")
-            sumUpDeaths+=districtArray[district].no;
-        if(districtArray[district].Subdivision=="Injured")
-            sumUpInjured+=districtArray[district].no;
-        if(districtArray[district].Subdivision=="Govt. Houses Fully Damaged")
-            sumUpFull+=districtArray[district].no;
-        if(districtArray[district].Subdivision=="Govt. Houses Partially Damaged")
-            sumUpPartial+=districtArray[district].no;
-
-    }
-    summedUpData.push(sumUpDeaths);
-    summedUpData.push(sumUpInjured);
-    summedUpData.push(sumUpFull);
-    summedUpData.push(sumUpPartial);
-    drawBarChart(summedUpData);
-}
-
 function setupBarChartBasics(){
-    var margin ={top:30,right:5,bottom:20,left:50},
+    var margin ={top:150,right:5,bottom:20,left:50},
         width=500-margin.left-margin.right,
-        height=250-margin.top-margin.bottom,
+        height=250 - margin.top - margin.bottom,
         colorBar=d3.scale.category20(),
-        barPadding=1
+        barPadding=2
         ;
-
     return{
         margin:margin,
         width:width,
@@ -126,8 +138,17 @@ function setupBarChartBasics(){
     }
         ;
 }
-//creates both bar chart
-function drawBarChart(districtData){
+
+
+function createBarChart(divId,barChartId){
+var districtArray=[];
+function getDistrictData(data){
+    for(var i=0;i<data.length;i++)
+        districtArray.push(data[i]);
+}
+
+   d3.csv("data/Data_map.csv",getDistrictData);
+
     var basics=setupBarChartBasics();
     var margin=basics.margin,
         width =basics.width,
@@ -135,28 +156,60 @@ function drawBarChart(districtData){
         colorBar=basics.colorBar,
         barPadding =basics.barPadding
         ;
-}
-
-var svg = d3.select("#barChartHC")
-    .append("g")
-    .attr("transform","translate("+margin.left+","+ margin.top+")")
-;
 
 
+    var sum=[],divison,subDivision=[],title;
 
-function drawIDBarChart(){
+    /* Returns: 0:  exact match -1:  string_a < string_b 1:  string_b > string_b*/
+    //compare string using localCompare
+    if(divId.localeCompare("#barChartHC")==0){
+        //clear sum array first
+        // sum.length=0;
+        title="HC";
+        divison="Human Causalities";
+        subDivision=["Death","Injured"];
+        //getSum(districtArray, divison, subDivision);
+    }
+    if(divId.localeCompare("#barChartID")==0){
+        title="ID";
+        division = "Infrastructural Damage";
+        if (document.getElementById("selectMode").value.localeCompare("Goverment")){
 
-}
-//base map completed now
-//relatung
-//start of choropleth drawing
+            subDivision = ["Fully Damaged", "Partially Damaged"];
+            //  getSum(districtArray, divison, subDivision);
+        }
+        if(document.getElementById("selectMode").value.localeCompare("Private")){
+            subDivision = ["Fully Damaged", "Partially Damaged"];
+        }
+    }
 
+    var sumA=0,sumB= 0;
 
+        for(var row=0;row<districtArray.length;row++) {
+            var number = parseInt(districtArray[row].no);
+            if (districtArray[row].Division == divison && (districtArray[row].Subdivision == subDivision[0]) ) {
+                var value = isNaN(number) ? 0 : number;
+                if (value!=0)
+                sumA += value;
+            }
+            if (districtArray[row].Division == divison && districtArray[row].Subdivision == subDivision[1]) {
+                value = isNaN(number) ? 0 :number;
+                if(value!=0)
+                sumB +=  value;
+            }
+        }
+        sum[0]=sumA;
+        sum[1]=sumB;
 
+    //define text of x axis
 
+    console.log(sum);
 
+    var xScale=d3.scale.linear()
+            .domain([0,sum.length])
+            .range([0,width])
+        ;
+  }
 
-
-
-
-
+createBarChart("#barChartHC","#plotbarChartHC");
+createBarChart("#barChartID","#plotbarChartID");
