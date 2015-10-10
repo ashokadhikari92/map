@@ -183,7 +183,7 @@ function getDistrictData(data){
         }
     }
 
-    var sumA=0,sumB= 0;
+    var sumA=10,sumB=10;
 
         for(var row=0;row<districtArray.length;row++) {
             var number = parseInt(districtArray[row].no);
@@ -193,13 +193,15 @@ function getDistrictData(data){
                 sumA += value;
             }
             if (districtArray[row].Division == divison && districtArray[row].Subdivision == subDivision[1]) {
-                value = isNaN(number) ? 0 :number;
+                var value = isNaN(number) ? 0 :number;
                 if(value!=0)
                 sumB +=  value;
             }
         }
-        sum[0]=sumA;
-        sum[1]=sumB;
+
+       // sum[0]=sumA;
+       // sum[1]=sumB;
+        sum=[45,55];
 
     //define text of x axis
 
@@ -209,6 +211,85 @@ function getDistrictData(data){
             .domain([0,sum.length])
             .range([0,width])
         ;
+
+    var yScale=d3.scale.linear()
+            .domain([0,d3.max(sum)])
+            .range([height,0])
+        ;
+
+    var svg = d3.select(divId)
+            .append("svg")
+            .attr("width",width+margin.left+margin.right)
+            .attr("height", height+margin.top + margin.bottom)
+            .attr("id",barChartId)
+            .attr("style", "border: 1px solid red;")
+    //.attr("style","")
+        ;
+
+    var plot= svg
+            .append("g")
+            .attr("transform","translate("+margin.left+","+ margin.top+")")
+        ;
+
+    //data seq death injured fully partially
+
+    //draw bargraph
+    plot.selectAll("rect")
+        .data(sum)
+        .enter()
+        .append("rect")
+        .attr("x",function(sum,i){return xScale(i);})
+        .attr("width",width/(sum.length+3)-barPadding)
+        .attr("y",function(sum){return yScale(sum);})
+        //.attr("y",function(sum){return sum;})
+        .attr("height",function(d){return height - yScale(d);})
+        // .attr("height",function(d){return height;})
+        .attr("fill","lightgrey")
+
+    ;
+
+    //add y labels to plot
+    plot.selectAll("text")
+        .data(sum)
+        .enter()
+        .append("text")
+        .text(function (d){return d;})
+        .attr("text-anchor","middle")
+        //set x position to the left edge of each bar plus half the har width
+        .attr("x",function(d,i){ return (i*(width/sum.length))
+            +((width/(sum.length+3)-barPadding)/2);})
+        .attr("y",function(d){return d;})
+        .attr("class","yAxis")
+    ;
+
+    //for x axis the data is diff
+    //title
+    svg.append("text")
+        .attr("x",(width+margin.left+margin.right)/2)
+        .attr("y",15)
+        .attr("class","title")
+        .attr("text-anchor","middle")
+        .text(title)
+    ;
+
+    //x axis label differs, add x labels to chart
+    var xLabels= svg.append("g")
+            .attr("transform","translate(" + margin.left + ","+(margin.top+height)+")")
+        ;
+
+    xLabels.selectAll("text.xAxis")
+        .data(subDivision)
+        .enter()
+        .append("text")
+        .text(function(d){return d;})
+        .attr("text-anchor","middle")
+
+        //set x position to the left edge of each bar plus half the bar width
+        .attr("x",function(d,i){return (i*(width/subDivision.length))+((width/(subDivision.length+3)-barPadding)/2)})
+        .attr("y",15)
+        .attr("class","xAxis")
+    ;
+
   }
 
 createBarChart("#barChartHC","#plotbarChartHC");
