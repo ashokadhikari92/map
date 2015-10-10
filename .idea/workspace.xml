@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a79141cc-cf36-464d-9484-96d654c35bcb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Data_map.csv" afterPath="$PROJECT_DIR$/data/Data_map.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drawMap.js" afterPath="$PROJECT_DIR$/drawMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="map.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,25 +26,15 @@
       <file leaf-file-name="drawMap.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drawMap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13986014">
-              <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.9440559">
+              <caret line="532" column="0" selection-start-line="532" selection-start-column="0" selection-end-line="532" selection-end-column="0" />
               <folding>
-                <element signature="e#2620#2687#0" expanded="false" />
-                <element signature="e#2751#2816#0" expanded="false" />
-                <element signature="e#2872#2933#0" expanded="false" />
-                <element signature="e#2955#2994#0" expanded="false" />
-                <element signature="e#3019#3076#0" expanded="false" />
-                <element signature="e#3133#3213#0" expanded="false" />
-                <element signature="e#3235#3274#0" expanded="false" />
-                <element signature="e#3299#3356#0" expanded="false" />
-                <element signature="e#3416#3496#0" expanded="false" />
-                <element signature="e#3518#3557#0" expanded="false" />
-                <element signature="e#3582#3639#0" expanded="false" />
-                <element signature="e#3695#3777#0" expanded="false" />
-                <element signature="e#3799#3838#0" expanded="false" />
-                <element signature="e#3863#3920#0" expanded="false" />
-                <element signature="e#3979#4048#0" expanded="false" />
-                <element signature="e#4112#4169#0" expanded="false" />
+                <element signature="n#!!block;n#mousemove#0;n#!!block;n#createMap#0" expanded="false" />
+                <element signature="n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+                <element signature="n#!!block;n#setupBarChartBasics#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+                <element signature="n#!!block;n#updateBarChart#0;n#!!block;n#updateBar#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+                <element signature="n#!!block;n#setupBarChartBasics#0" expanded="false" />
+                <element signature="n#!!block;n#createBarChart#0;n#!!block;n#createBar#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -55,7 +43,7 @@
       <file leaf-file-name="nepal-districts.geojson" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/nepal-districts.geojson">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8065.0386">
+            <state vertical-scroll-proportion="8063.5">
               <caret line="76" column="64" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="64" />
               <folding />
             </state>
@@ -65,8 +53,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5172415">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+            <state vertical-scroll-proportion="-13.344828">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -288,9 +276,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17300381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17300381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -322,7 +310,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -364,22 +352,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2620#2687#0" expanded="false" />
-            <element signature="e#2751#2816#0" expanded="false" />
-            <element signature="e#2872#2933#0" expanded="false" />
-            <element signature="e#2955#2994#0" expanded="false" />
-            <element signature="e#3019#3076#0" expanded="false" />
-            <element signature="e#3133#3213#0" expanded="false" />
-            <element signature="e#3235#3274#0" expanded="false" />
-            <element signature="e#3299#3356#0" expanded="false" />
-            <element signature="e#3416#3496#0" expanded="false" />
-            <element signature="e#3518#3557#0" expanded="false" />
-            <element signature="e#3582#3639#0" expanded="false" />
-            <element signature="e#3695#3777#0" expanded="false" />
-            <element signature="e#3799#3838#0" expanded="false" />
-            <element signature="e#3863#3920#0" expanded="false" />
-            <element signature="e#3979#4048#0" expanded="false" />
-            <element signature="e#4112#4169#0" expanded="false" />
+            <element signature="n#!!block;n#mousemove#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#updateBarChart#0;n#!!block;n#updateBar#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0" expanded="false" />
+            <element signature="n#!!block;n#createBarChart#0;n#!!block;n#createBar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -421,22 +399,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2620#2687#0" expanded="false" />
-            <element signature="e#2751#2816#0" expanded="false" />
-            <element signature="e#2872#2933#0" expanded="false" />
-            <element signature="e#2955#2994#0" expanded="false" />
-            <element signature="e#3019#3076#0" expanded="false" />
-            <element signature="e#3133#3213#0" expanded="false" />
-            <element signature="e#3235#3274#0" expanded="false" />
-            <element signature="e#3299#3356#0" expanded="false" />
-            <element signature="e#3416#3496#0" expanded="false" />
-            <element signature="e#3518#3557#0" expanded="false" />
-            <element signature="e#3582#3639#0" expanded="false" />
-            <element signature="e#3695#3777#0" expanded="false" />
-            <element signature="e#3799#3838#0" expanded="false" />
-            <element signature="e#3863#3920#0" expanded="false" />
-            <element signature="e#3979#4048#0" expanded="false" />
-            <element signature="e#4112#4169#0" expanded="false" />
+            <element signature="n#!!block;n#mousemove#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#updateBarChart#0;n#!!block;n#updateBar#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0" expanded="false" />
+            <element signature="n#!!block;n#createBarChart#0;n#!!block;n#createBar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -470,22 +438,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2620#2687#0" expanded="false" />
-            <element signature="e#2751#2816#0" expanded="false" />
-            <element signature="e#2872#2933#0" expanded="false" />
-            <element signature="e#2955#2994#0" expanded="false" />
-            <element signature="e#3019#3076#0" expanded="false" />
-            <element signature="e#3133#3213#0" expanded="false" />
-            <element signature="e#3235#3274#0" expanded="false" />
-            <element signature="e#3299#3356#0" expanded="false" />
-            <element signature="e#3416#3496#0" expanded="false" />
-            <element signature="e#3518#3557#0" expanded="false" />
-            <element signature="e#3582#3639#0" expanded="false" />
-            <element signature="e#3695#3777#0" expanded="false" />
-            <element signature="e#3799#3838#0" expanded="false" />
-            <element signature="e#3863#3920#0" expanded="false" />
-            <element signature="e#3979#4048#0" expanded="false" />
-            <element signature="e#4112#4169#0" expanded="false" />
+            <element signature="n#!!block;n#mousemove#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#updateBarChart#0;n#!!block;n#updateBar#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0" expanded="false" />
+            <element signature="n#!!block;n#createBarChart#0;n#!!block;n#createBar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -519,22 +477,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2620#2687#0" expanded="false" />
-            <element signature="e#2751#2816#0" expanded="false" />
-            <element signature="e#2872#2933#0" expanded="false" />
-            <element signature="e#2955#2994#0" expanded="false" />
-            <element signature="e#3019#3076#0" expanded="false" />
-            <element signature="e#3133#3213#0" expanded="false" />
-            <element signature="e#3235#3274#0" expanded="false" />
-            <element signature="e#3299#3356#0" expanded="false" />
-            <element signature="e#3416#3496#0" expanded="false" />
-            <element signature="e#3518#3557#0" expanded="false" />
-            <element signature="e#3582#3639#0" expanded="false" />
-            <element signature="e#3695#3777#0" expanded="false" />
-            <element signature="e#3799#3838#0" expanded="false" />
-            <element signature="e#3863#3920#0" expanded="false" />
-            <element signature="e#3979#4048#0" expanded="false" />
-            <element signature="e#4112#4169#0" expanded="false" />
+            <element signature="n#!!block;n#mousemove#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#updateBarChart#0;n#!!block;n#updateBar#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0" expanded="false" />
+            <element signature="n#!!block;n#createBarChart#0;n#!!block;n#createBar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -576,22 +524,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
           <folding>
-            <element signature="e#2620#2687#0" expanded="false" />
-            <element signature="e#2751#2816#0" expanded="false" />
-            <element signature="e#2872#2933#0" expanded="false" />
-            <element signature="e#2955#2994#0" expanded="false" />
-            <element signature="e#3019#3076#0" expanded="false" />
-            <element signature="e#3133#3213#0" expanded="false" />
-            <element signature="e#3235#3274#0" expanded="false" />
-            <element signature="e#3299#3356#0" expanded="false" />
-            <element signature="e#3416#3496#0" expanded="false" />
-            <element signature="e#3518#3557#0" expanded="false" />
-            <element signature="e#3582#3639#0" expanded="false" />
-            <element signature="e#3695#3777#0" expanded="false" />
-            <element signature="e#3799#3838#0" expanded="false" />
-            <element signature="e#3863#3920#0" expanded="false" />
-            <element signature="e#3979#4048#0" expanded="false" />
-            <element signature="e#4112#4169#0" expanded="false" />
+            <element signature="n#!!block;n#mousemove#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#updateBarChart#0;n#!!block;n#updateBar#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0" expanded="false" />
+            <element signature="n#!!block;n#createBarChart#0;n#!!block;n#createBar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -632,22 +570,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2620#2687#0" expanded="false" />
-            <element signature="e#2751#2816#0" expanded="false" />
-            <element signature="e#2872#2933#0" expanded="false" />
-            <element signature="e#2955#2994#0" expanded="false" />
-            <element signature="e#3019#3076#0" expanded="false" />
-            <element signature="e#3133#3213#0" expanded="false" />
-            <element signature="e#3235#3274#0" expanded="false" />
-            <element signature="e#3299#3356#0" expanded="false" />
-            <element signature="e#3416#3496#0" expanded="false" />
-            <element signature="e#3518#3557#0" expanded="false" />
-            <element signature="e#3582#3639#0" expanded="false" />
-            <element signature="e#3695#3777#0" expanded="false" />
-            <element signature="e#3799#3838#0" expanded="false" />
-            <element signature="e#3863#3920#0" expanded="false" />
-            <element signature="e#3979#4048#0" expanded="false" />
-            <element signature="e#4112#4169#0" expanded="false" />
+            <element signature="n#!!block;n#mousemove#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#updateBarChart#0;n#!!block;n#updateBar#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0" expanded="false" />
+            <element signature="n#!!block;n#createBarChart#0;n#!!block;n#createBar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -702,22 +630,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2620#2687#0" expanded="false" />
-            <element signature="e#2751#2816#0" expanded="false" />
-            <element signature="e#2872#2933#0" expanded="false" />
-            <element signature="e#2955#2994#0" expanded="false" />
-            <element signature="e#3019#3076#0" expanded="false" />
-            <element signature="e#3133#3213#0" expanded="false" />
-            <element signature="e#3235#3274#0" expanded="false" />
-            <element signature="e#3299#3356#0" expanded="false" />
-            <element signature="e#3416#3496#0" expanded="false" />
-            <element signature="e#3518#3557#0" expanded="false" />
-            <element signature="e#3582#3639#0" expanded="false" />
-            <element signature="e#3695#3777#0" expanded="false" />
-            <element signature="e#3799#3838#0" expanded="false" />
-            <element signature="e#3863#3920#0" expanded="false" />
-            <element signature="e#3979#4048#0" expanded="false" />
-            <element signature="e#4112#4169#0" expanded="false" />
+            <element signature="n#!!block;n#mousemove#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#updateBarChart#0;n#!!block;n#updateBar#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0" expanded="false" />
+            <element signature="n#!!block;n#createBarChart#0;n#!!block;n#createBar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -813,22 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5172415">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/nepal-districts.geojson">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8065.0386">
-          <caret line="76" column="64" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/Data_map.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-29.23077">
@@ -837,27 +739,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/nepal-districts.geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8063.5">
+          <caret line="76" column="64" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.344828">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/drawMap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13986014">
-          <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.9440559">
+          <caret line="532" column="0" selection-start-line="532" selection-start-column="0" selection-end-line="532" selection-end-column="0" />
           <folding>
-            <element signature="e#2620#2687#0" expanded="false" />
-            <element signature="e#2751#2816#0" expanded="false" />
-            <element signature="e#2872#2933#0" expanded="false" />
-            <element signature="e#2955#2994#0" expanded="false" />
-            <element signature="e#3019#3076#0" expanded="false" />
-            <element signature="e#3133#3213#0" expanded="false" />
-            <element signature="e#3235#3274#0" expanded="false" />
-            <element signature="e#3299#3356#0" expanded="false" />
-            <element signature="e#3416#3496#0" expanded="false" />
-            <element signature="e#3518#3557#0" expanded="false" />
-            <element signature="e#3582#3639#0" expanded="false" />
-            <element signature="e#3695#3777#0" expanded="false" />
-            <element signature="e#3799#3838#0" expanded="false" />
-            <element signature="e#3863#3920#0" expanded="false" />
-            <element signature="e#3979#4048#0" expanded="false" />
-            <element signature="e#4112#4169#0" expanded="false" />
+            <element signature="n#!!block;n#mousemove#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#updateBarChart#0;n#!!block;n#updateBar#0;n#!!block;n#mouseclick#0;n#!!block;n#createMap#0" expanded="false" />
+            <element signature="n#!!block;n#setupBarChartBasics#0" expanded="false" />
+            <element signature="n#!!block;n#createBarChart#0;n#!!block;n#createBar#0" expanded="false" />
           </folding>
         </state>
       </provider>
