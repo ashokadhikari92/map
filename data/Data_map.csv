@@ -12,14 +12,14 @@ Panchthar,Infrastructural Damage,Govt. Houses Fully Damaged,22
 Panchthar,Infrastructural Damage,Govt. Houses Partially Damaged,5
 Panchthar,Infrastructural Damage,Private Houses Fully Damaged,229
 Panchthar,Infrastructural Damage,Private Houses Partially Damaged,926
-Panchthar,No of hits,No of hits,0
-Ilaam,Human Causalities,Death,0
-Ilaam,Human Causalities,Injured,10
-Ilaam,Infrastructural Damage,Govt. Houses Fully Damaged,34
-Ilaam,Infrastructural Damage,Govt. Houses Partially Damaged,42
-Ilaam,Infrastructural Damage,Private Houses Fully Damaged,375
-Ilaam,Infrastructural Damage,Private Houses Partially Damaged,2647
-Ilaam,No of hits,No of hits,0
+Panchthar,No of hits,No of hits,
+Ilam,Human Causalities,Death,0
+Ilam,Human Causalities,Injured,10
+Ilam,Infrastructural Damage,Govt. Houses Fully Damaged,34
+Ilam,Infrastructural Damage,Govt. Houses Partially Damaged,42
+Ilam,Infrastructural Damage,Private Houses Fully Damaged,375
+Ilam,Infrastructural Damage,Private Houses Partially Damaged,2647
+Ilam,No of hits,No of hits,0
 Jhapa,Human Causalities,Death,1
 Jhapa,Human Causalities,Injured,25
 Jhapa,Infrastructural Damage,Govt. Houses Fully Damaged,0
@@ -48,13 +48,13 @@ Dhankuta,Infrastructural Damage,Govt. Houses Partially Damaged,39
 Dhankuta,Infrastructural Damage,Private Houses Fully Damaged,929
 Dhankuta,Infrastructural Damage,Private Houses Partially Damaged,1500
 Dhankuta,No of hits,No of hits,0
-Terhathum,Human Causalities,Death,1
-Terhathum,Human Causalities,Injured,14
-Terhathum,Infrastructural Damage,Govt. Houses Fully Damaged,0
-Terhathum,Infrastructural Damage,Govt. Houses Partially Damaged,60
-Terhathum,Infrastructural Damage,Private Houses Fully Damaged,180
-Terhathum,Infrastructural Damage,Private Houses Partially Damaged,1901
-Terhathum,No of hits,No of hits,0
+Tehrathum,Human Causalities,Death,1
+Tehrathum,Human Causalities,Injured,14
+Tehrathum,Infrastructural Damage,Govt. Houses Fully Damaged,0
+Tehrathum,Infrastructural Damage,Govt. Houses Partially Damaged,60
+Tehrathum,Infrastructural Damage,Private Houses Fully Damaged,180
+Tehrathum,Infrastructural Damage,Private Houses Partially Damaged,1901
+Tehrathum,No of hits,No of hits,0
 Bhojpur,Human Causalities,Death,2
 Bhojpur,Human Causalities,Injured,13
 Bhojpur,Infrastructural Damage,Govt. Houses Fully Damaged,22
@@ -209,13 +209,13 @@ Kavre,Infrastructural Damage,Govt. Houses Partially Damaged,31
 Kavre,Infrastructural Damage,Private Houses Fully Damaged,49933
 Kavre,Infrastructural Damage,Private Houses Partially Damaged,23714
 Kavre,No of hits,No of hits,2
-Makawanpur,Human Causalities,Death,33
-Makawanpur,Human Causalities,Injured,229
-Makawanpur,Infrastructural Damage,Govt. Houses Fully Damaged,46
-Makawanpur,Infrastructural Damage,Govt. Houses Partially Damaged,177
-Makawanpur,Infrastructural Damage,Private Houses Fully Damaged,20035
-Makawanpur,Infrastructural Damage,Private Houses Partially Damaged,17383
-Makawanpur,No of hits,No of hits,0
+Makwanpur,Human Causalities,Death,33
+Makwanpur,Human Causalities,Injured,229
+Makwanpur,Infrastructural Damage,Govt. Houses Fully Damaged,46
+Makwanpur,Infrastructural Damage,Govt. Houses Partially Damaged,177
+Makwanpur,Infrastructural Damage,Private Houses Fully Damaged,20035
+Makwanpur,Infrastructural Damage,Private Houses Partially Damaged,17383
+Makwanpur,No of hits,No of hits,0
 Rautahat,Human Causalities,Death,3
 Rautahat,Human Causalities,Injured,38
 Rautahat,Infrastructural Damage,Govt. Houses Fully Damaged,0
@@ -237,13 +237,13 @@ Parsa,Infrastructural Damage,Govt. Houses Partially Damaged,12
 Parsa,Infrastructural Damage,Private Houses Fully Damaged,0
 Parsa,Infrastructural Damage,Private Houses Partially Damaged,35
 Parsa,No of hits,No of hits,0
-Chitawan,Human Causalities,Death,10
-Chitawan,Human Causalities,Injured,143
-Chitawan,Infrastructural Damage,Govt. Houses Fully Damaged,0
-Chitawan,Infrastructural Damage,Govt. Houses Partially Damaged,40
-Chitawan,Infrastructural Damage,Private Houses Fully Damaged,472
-Chitawan,Infrastructural Damage,Private Houses Partially Damaged,754
-Chitawan,No of hits,No of hits,0
+Chitwan,Human Causalities,Death,10
+Chitwan,Human Causalities,Injured,143
+Chitwan,Infrastructural Damage,Govt. Houses Fully Damaged,0
+Chitwan,Infrastructural Damage,Govt. Houses Partially Damaged,40
+Chitwan,Infrastructural Damage,Private Houses Fully Damaged,472
+Chitwan,Infrastructural Damage,Private Houses Partially Damaged,754
+Chitwan,No of hits,No of hits,0
 Nawalparasi,Human Causalities,Death,1
 Nawalparasi,Human Causalities,Injured,41
 Nawalparasi,Infrastructural Damage,Govt. Houses Fully Damaged,0

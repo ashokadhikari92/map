@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <script src="data/d3.js" charset="utf-8"></script>
-
+    <script src="queue.js" charset="utf-8"></script>
+    <script src="topojson.js" charset="utf-8"></script>
+    <script src="d3.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="style/mapstyle.css">
 
 </head>
@@ -18,9 +19,9 @@
 <div id="barChart">
 <div id="barChartHC"></div>
 <div id="barChartID">
-    <select id="selectMode">
-        <option value="goverment" selected>Goverment</option>
-        <option value="private">Private</option>
+    <select id="selectMode" onchange="updateBarOnSelect()">
+        <option value="Goverment" selected="selected">Goverment</option>
+        <option value="Private" >Private</option>
     </select>
 </div>
 </div>

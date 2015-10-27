@@ -1,7 +1,7 @@
 .tooltip{ background-color:gainsboro;
     margin: 10px;
     height: 45px;
-    width: 150px;
+    width: 200px;
     padding-left: 10px;
     padding-top: 10px;
     -webkit-border-radius:10px;
@@ -29,6 +29,12 @@ select
     height: 98%;
     border:1px solid green;
 }
+.maptitle{
+    margin: 0px 0px;
+}
+.legend {
+    font-size: 12px;
+}
 
 #barChart{
     margin: 5px 5px;
@@ -48,3 +54,14 @@ select
     border:1px solid blue;
 }
 
+
+.q0-9 { fill:rgb(255,230,230); }
+.q1-9 { fill:rgb(255,150,150); }
+.q2-9 { fill:rgb(255,100,100); }
+.q3-9 { fill:rgb(230,100,100); }
+.q4-9 { fill:rgb(235,90,90); }
+.q5-9 { fill:rgb(240,80,80); }
+.q6-9 { fill:rgb(245,60,60); }
+.q7-9 { fill:rgb(250,50,50); }
+.q8-9 { fill:rgb(255,0,0); }
+.white{fill:rgb(255,255,255);}
