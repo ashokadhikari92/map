@@ -33,8 +33,6 @@ function createMap(nepal) {
             .attr("height", height+50)
             .attr("style", "border: 1px solid red;");
 
-  
-
     var colorBar = d3.scale.category20();
     var group = canvas.selectAll("g")
             .data(nepal.features)
@@ -75,14 +73,39 @@ function createMap(nepal) {
             .attr("class",function(d){return quantize(d.no)})
             //.attr("fill",function(d,i){return color(i);})
             .attr("stroke", "#ccc")
-
             .attr("stroke-width", "2px")
             .on("mouseover", mouseover)
             .on("mousemove", mousemove)
             .on("mouseout", mouseout)
-            .on("click", mouseclick)
-        ;
+            .on("click", mouseclick);
 
+    var color_domain =     [50, 150,  250, 350,450, 550,750, 850, 950, 1050]
+    var ext_color_domain = [0, 50, 150, 250,350,450,550, 750, 850, 950]
+    var legend_labels = ["0", "1", "2", "3", "4", "5","6", "7", "8", "9"]
+    var color = d3.scale.threshold()
+        .domain(color_domain)
+        .range(["rgb(255,255,255)", "rgb(255,230,230)", "rgb(255,150,150)", "rgb(255,100,100)", "rgb(230,100,100)",
+            "rgb(235,90,90)","rgb(240,80,80)","rgb(245,60,60)","rgb(250,50,50)","rgb(255,0,0)"]);
+
+    var legend= canvas.selectAll("g.legend")
+        .data(ext_color_domain)
+        .enter().append("g")
+        .attr("class", "legend");
+
+    var ls_w = 20, ls_h = 20;
+
+    legend.append("rect")
+        .attr("x", 20)
+        .attr("y", function(d, i){ return height - (i*ls_h) - 2*ls_h;})
+        .attr("width", ls_w)
+        .attr("height", ls_h)
+        .style("fill", function(d, i) { return color(d); })
+        .style("opacity", 0.8);
+
+    legend.append("text")
+        .attr("x", 50)
+        .attr("y", function(d, i){ return height - (i*ls_h) - ls_h - 4;})
+        .text(function(d, i){ return legend_labels[i]; });
 
     //mouse event handler
     var bodyNode = d3.select('body').node();
@@ -106,6 +129,7 @@ function createMap(nepal) {
                 barPadding: barPadding
             }
                 ;
+
         }
 
         function updateBar(data) {
